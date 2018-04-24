@@ -236,10 +236,13 @@ Credits: @HelloDeadline, @sorianog
 This one is mainly for [me](@jerome_etienne) to remember :)
 
 ```bash
-# replace REVISION to the proper version
+# Update CHANGELOG.md - remove the -dev into version
+atom CHANGELOG.md
+
+# replace REVISION to the proper version, search/replace on the version string should do it
 atom three.js/src/threex/threex-artoolkitcontext.js package.json README.md
 
-# Rebuild a-frame and webvr-polyfill
+# Rebuild and minify everything - aka a-frame and three.js
 make minify
 
 # Commit everything
@@ -252,7 +255,7 @@ git checkout master
 git merge dev
 
 # tag the release
-git tag 1.5.1
+git tag 1.5.5
 
 # push the tag on github
 git push origin --tags
@@ -266,6 +269,9 @@ npm publish
 # Come back to dev branch
 git checkout dev
 
-# update the a-frame codepen
+# Update CHANGELOG.md - start new dev version
+atom CHANGELOG.md
+
+# update the a-frame codepen if needed
 open "https://codepen.io/jeromeetienne/pen/mRqqzb?editors=1000#0"
 ```
